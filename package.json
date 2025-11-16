@@ -1,0 +1,12 @@
+{
+  "name": "performance-jmeter",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "pretest:perf": "if exist jmeter\\reports\\reqres-smoke rmdir /S /Q jmeter\\reports\\reqres-smoke",
+    "test:perf": "C:\\Users\\dsdf8\\apache-jmeter-5.6.3\\apache-jmeter-5.6.3\\bin\\jmeter.bat -n -t jmeter/test-plans/reqres-smoke.jmx -l jmeter/results/reqres-smoke.jtl -e -o jmeter/reports/reqres-smoke",
+    "report:perf": "start jmeter\\\\reports\\\\reqres-smoke\\\\index.html"
+  },
+  "devDependencies": {}
+}
+

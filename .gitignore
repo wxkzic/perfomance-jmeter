@@ -1,0 +1,13 @@
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Логи / тимчасові файли
+*.log
+
+# JMeter результати і звіти (генеруються, не зберігаємо в git)
+jmeter/results/
+jmeter/reports/
+
