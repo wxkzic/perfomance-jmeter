@@ -1,4 +1,4 @@
-name: JMeter Tests
+name: Performance Tests
 on: [push]
 
 jobs:
@@ -6,14 +6,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: Install JMeter
         run: |
-          sudo apt update
-          sudo apt install -y jmeter
-
-      - name: Run tests
+          sudo apt-get update
+          sudo apt-get install -y jmeter
+      - name: Run Performance Tests
         run: |
           jmeter -n -t jmeter/test-plans/reqres-smoke.jmx \
-                 -l jmeter/results/result.jtl \
-                 -e -o jmeter/reports
+                 -l jmeter/results/reqres-smoke.jtl \
+                 -e -o jmeter/reports/reqres-smoke
